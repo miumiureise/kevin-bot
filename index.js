@@ -35,7 +35,7 @@ const scheduleList = [
   { time: "0 9 * * *", task: "朝の歯磨き" },
   { time: "0 21 * * *", task: "夜のお風呂" },
   { time: "30 21 * * *", task: "夜の歯磨き" },
- 
+  
 ];
 
 client.once("ready", () => {
@@ -58,6 +58,12 @@ client.on("messageCreate", (message) => {
   if (message.author.bot) return;
 
   const content = message.content.trim();
+
+
+  if (content === "よしよし") {
+    message.reply("……よくやったな、子猫ちゃん。ご褒美に頭を撫でてやろう。");
+  }
+
   if (content === "罵って") {
     message.reply("おい、何やってんだ。だらしない子猫だな。自覚はあるのか？");
   }
@@ -77,5 +83,6 @@ client.on("messageCreate", (message) => {
     message.reply(random);
   }
 });
+
 
 
