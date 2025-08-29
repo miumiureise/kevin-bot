@@ -35,7 +35,7 @@ const scheduleList = [
   { time: "0 9 * * *", task: "朝の歯磨き" },
   { time: "0 21 * * *", task: "夜のお風呂" },
   { time: "30 21 * * *", task: "夜の歯磨き" },
-  { time: "*/5 * * * *", task: "テスト命令" } // 5分おきにテスト
+ 
 ];
 
 client.once("ready", () => {
